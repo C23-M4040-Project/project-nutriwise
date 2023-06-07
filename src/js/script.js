@@ -8,9 +8,7 @@ const API_KEY = '0ddfb4e413cb4bce9818e436936ed113';
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const recipeList = document.getElementById('recipe-list');
-const recipeArticle = document.getElementById('recipe-article');
 const recommendationList = document.getElementById('recommendation-list');
-// const nutritionData = document.getElementById('nutrition-data');
 
 // Event listener for form submission
 searchForm.addEventListener('submit', (e) => {
@@ -59,18 +57,7 @@ function createRecipeCard(recipe) {
 // Get recipe information
 async function getRecipeInformation(recipeId) {
   const response = await fetch(`${API_ENDPOINT}/${recipeId}/information?apiKey=${API_KEY}`);
-  const data = await response.json();
-  displayRecipeInformation(data);
   getRecommendations(recipeId);
-}
-
-// Display recipe information as an article
-function displayRecipeInformation(recipeInfo) {
-  recipeArticle.innerHTML = '';
-
-  const article = document.createElement('article');
-  article.innerHTML = recipeInfo.summary;
-  recipeArticle.appendChild(article);
 }
 
 // Get recipe recommendations
