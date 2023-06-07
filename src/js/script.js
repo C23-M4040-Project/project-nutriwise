@@ -2,7 +2,7 @@
 /* eslint-disable no-restricted-syntax */
 // API endpoint and key
 const API_ENDPOINT = 'https://api.spoonacular.com/recipes';
-const API_KEY = 'd5de6210a75a47b5b4559c6d120e584d';
+const API_KEY = '0ddfb4e413cb4bce9818e436936ed113';
 
 // DOM elements
 const searchForm = document.getElementById('search-form');
@@ -10,7 +10,7 @@ const searchInput = document.getElementById('search-input');
 const recipeList = document.getElementById('recipe-list');
 const recipeArticle = document.getElementById('recipe-article');
 const recommendationList = document.getElementById('recommendation-list');
-const nutritionData = document.getElementById('nutrition-data');
+// const nutritionData = document.getElementById('nutrition-data');
 
 // Event listener for form submission
 searchForm.addEventListener('submit', (e) => {
@@ -56,6 +56,23 @@ function createRecipeCard(recipe) {
   return recipeCard;
 }
 
+// Get recipe information
+async function getRecipeInformation(recipeId) {
+  const response = await fetch(`${API_ENDPOINT}/${recipeId}/information?apiKey=${API_KEY}`);
+  const data = await response.json();
+  displayRecipeInformation(data);
+  getRecommendations(recipeId);
+}
+
+// Display recipe information as an article
+function displayRecipeInformation(recipeInfo) {
+  recipeArticle.innerHTML = '';
+
+  const article = document.createElement('article');
+  article.innerHTML = recipeInfo.summary;
+  recipeArticle.appendChild(article);
+}
+
 // Get recipe recommendations
 async function getRecommendations(recipeId) {
   recommendationList.innerHTML = '';
@@ -85,7 +102,6 @@ function createRecommendationCard(recommendation) {
   recommendationCard.addEventListener('click', async () => {
     await getRecipeInformation(recommendation.id); // Wait for recipe information to be fetched
     getRecommendations(recommendation.id);
-    getNutritionInformation(recommendation.id);
   });
 
   return recommendationCard;
