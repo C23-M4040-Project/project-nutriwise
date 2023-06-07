@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  html {
+    scroll-behavior: #f5f5f5;
+  }
+  
+  section {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  section nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  section nav .logo img {
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+  }
+  section nav .logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  section nav ul {
+    list-style: none;
+  }
+  
+  section nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  section nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+  }
+  
+  section nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #00ff1a;
+    display: block;
+    transition: 0.1s linear;
+  }
+  
+  section nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  section nav ul li a:hover {
+    color: #6dfe6d;
+  }
+  
+  section nav .icon i {
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  section nav .icon i:hover {
+    color: #5661c7;
+  }
+
+  .container {
+    text-align: center;
+    padding: 200px;
+   
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    text-align: center;
+  }
+  .column {
+    width: 100%;
+    padding: 0.5em 0;
+  }
+  
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5em;
+    color: #1f003b;
+  }
+ /* Team member section */
+ .team-section .row h1 {
+  display: block;
+  font-family: "mv boli";
+  margin: 4em auto 0.5em;
+  font-size: 3em;
+  color: #1f003b;
+  text-align: center;
+}
+
+.team-section .row h1 span {
+  color: #6dfe6d;
+  margin-left: 15px;
+  font-family: "mv boli";
+}
+ .card {
+  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+  padding: 3.5em 1em;
+  border-radius: 0.6em;
+  color: #1f003b;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ffffff;
+}
+.card .img-container {
+  width: 8em;
+  height: 8em;
+  background-color: #1db412df;
+  padding: 0.5em;
+  border-radius: 50%;
+  margin: 0 auto 2em auto;
+}
+.card img {
+  width: 100%;
+  border-radius: 50%;
+}
+.card h3 {
+  font-weight: 500;
+}
+.card p {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0.5em 0 0.5em 0;
+  letter-spacing: 2px;
+}
+.card .description {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #241537;
+  margin-bottom: 30px;
+}
+
+.icons {
+  width: 50%;
+  min-width: 180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.4em;
+}
+.card:hover {
+  background: linear-gradient(#3fdf33, #60e57fd1);
+  color: #ffffff;
+}
+.card:hover .img-container {
+  transform: scale(1.15);
+}
+  
+/*Footer*/
+
+footer {
+  width: 100%;
+  padding: 30px 0 0 20px;
+  background: #eeeeee;
+}
+
+footer .footer_main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag {
+  text-align: center;
+  margin-left: 130px;
+}
+
+footer .footer_main .footer_tag h2 {
+  color: #46de0a;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+footer .footer_main .footer_tag p {
+  margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover {
+  color: #5661c7;
+}
+
+footer .end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #0b0c0b;
+ 
+}
+  
+  ::-webkit-scrollbar {
+    width: 13px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #5661c7;
+    border-radius: 15px;
+  }
+  

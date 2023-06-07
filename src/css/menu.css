@@ -1,0 +1,63 @@
+/* Add your custom styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  #search-input {
+    padding: 10px;
+    width: 300px;
+  }
+  
+  #recipe-results, #recipe-info, #recommendations, #nutrition-info {
+    margin-top: 30px;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  #recipe-list, #recipe-article, #recommendation-list, #nutrition-data {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .recipe-card, .recommendation-card, .nutrition-card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .recipe-card img, .recommendation-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .nutrition-card {
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    #recipe-list, #recipe-article, #recommendation-list, #nutrition-data {
+      grid-template-columns: 1fr;
+    }
+  }
+  
