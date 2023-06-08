@@ -47,6 +47,11 @@ function createRecipeCard(recipe) {
   title.textContent = recipe.title;
   recipeCard.appendChild(title);
 
+  const link = document.createElement('a');
+  link.textContent = 'View Recipe';
+  link.href = recipe.sourceUrl;
+  recipeCard.appendChild(link);
+
   recipeCard.addEventListener('click', () => {
     getRecipeInformation(recipe.id);
   });
@@ -93,3 +98,13 @@ function createRecommendationCard(recommendation) {
 
   return recommendationCard;
 }
+
+// Initialize the page with some recipes
+async function initializePage() {
+  const response = await fetch(`${API_ENDPOINT}/complexSearch?apiKey=${API_KEY}&number=8`);
+  const data = await response.json();
+  displayRecipes(data.results);
+}
+
+// Call the initializePage function when the page loads
+window.addEventListener('load', initializePage);
