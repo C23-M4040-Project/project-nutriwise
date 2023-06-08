@@ -198,7 +198,7 @@ nav #close {
   font-weight: 6000;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 20rem;
+  padding-top: 8rem;
 }
 .footer .container {
   display: grid;
@@ -207,7 +207,7 @@ nav #close {
   padding: 2.5 0rem;
 }
 .footer .container .footer-box {
-  padding: 0.5rem 1rem 1.5rem;
+  padding: 0.5rem 4rem 2rem;
 }
 .footer .container .footer-box h3 {
   color: rgb(19, 12, 122);
