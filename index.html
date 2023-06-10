@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nutriwise Web</title>
+    <title>Nutriwise Website</title>
     <!-- custom css link -->
     <link rel="stylesheet" type="text/css" href="style.css" />
     <!-- font awesome cdn link -->
@@ -61,78 +61,72 @@
     </section>
     <!-- about section end -->
 
-    <!-- team section start -->
+    <!-- artikel section start -->
 
-    <section class="team" id="team">
-      <h1 class="heading">our <span>team</span></h1>
+    <section class="article" id="article">
+      <h1 class="heading">Discover <span>Delicious Foods</span></h1>
       <div class="container">
-        <div class="team-box">
-          <div class="team-img">
-            <img src="img/team2.jpg" />
+        <div class="article-box">
+          <div class="article-img">
+            <img src="img/chimicurri.jpg" />
           </div>
-          <div class="team-content">
-            <h3>Syahrul Amri</h3>
-            <p>Anggota</p>
-
-            <div class="social">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="team-box">
-          <div class="team-img">
-            <img src="img/team2.jpg" />
-          </div>
-          <div class="team-content">
-            <h3>Rafi Aditya Mahendra</h3>
-            <p>Anggota</p>
-
-            <div class="social">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
+          <div class="article-content">
+            <h3>A Chimichurri You'll Want to Put on Everything</h3>
+            <p id="chimichurri-para" class="content-paragraph">
+              Chimichurri is a vibrant and flavorful sauce that originates from Argentina.
+              It's made with fresh herbs like parsley and cilantro, garlic, vinegar, and olive oil, resulting in a tangy
+              and herbaceous condiment that pairs perfectly with grilled meats, vegetables, and more.
+            </p>
+            <a href="#" class="toggle-button" onclick="toggleReadMore('chimichurri-para')">Read More</a>
           </div>
         </div>
-
-        <div class="team-box">
-          <div class="team-img">
-            <img src="img/team2.jpg" />
+  
+        <div class="article-box">
+          <div class="article-img">
+            <img src="img/drink.jpg" />
           </div>
-          <div class="team-content">
-            <h3>Raihan Thobie Maulana</h3>
-            <p>Anggota</p>
-
-            <div class="social">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
+          <div class="article-content">
+            <h3>A Refreshing Drink To Welcome You All</h3>
+              <p id="refreshing-drink-para" class="content-paragraph">
+                Looking for a cool and revitalizing beverage to quench your thirst? This refreshing drink is the perfect choice to welcome you all,
+                especially during hot summer days. Packed with fruity flavors and a hint of mint, it's sure to leave you feeling refreshed and revitalized.
+              </p>
+            <a href="#" class="toggle-button" onclick="toggleReadMore('refreshing-drink-para')">Read More</a>
+          </div>          
+        </div>
+  
+        <div class="article-box">
+          <div class="article-img">
+            <img src="img/potato.jpg" />
+          </div>
+          <div class="article-content">
+            <h3>For a Baked Potato (fluffy every time when using this trick)</h3>
+            <p id="baked-potato-para" class="content-paragraph">
+              There's nothing quite like a perfectly baked potato with a fluffy interior and a crispy skin. If you've ever struggled to achieve that ideal texture,
+              we have a foolproof trick that will guarantee a fluffy baked potato every time.
+            </p>
+            <a href="#" class="toggle-button" onclick="toggleReadMore('baked-potato-para')">Read More</a>
           </div>
         </div>
-
-        <div class="team-box">
-          <div class="team-img">
-            <img src="img/team2.jpg" />
-          </div>
-          <div class="team-content">
-            <h3>Muhammad Varhan K</h3>
-            <p>Anggota</p>
-
-            <div class="social">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
+  <!-- artikel section end -->
 
-    <!-- team section ends -->
+  <!-- trivia section start -->
+  <section class="trivia" id="trivia">
+    <div class="container">
+      <div class="image">
+    <!-- Gambar trivia (ganti dengan gambar menarik) -->
+    <img src="img/foodtrivia.webp" alt="Trivia Image" style="max-width: 600px;">
+    </div>
+
+    <h1 class="heading">Did You Know?</h1>
+    <div id="trivia-container">
+    <p id="trivia-text">Loading trivia...</p>
+      <button id="trivia-button" onclick="getRandomTrivia()">Get Random Trivia</button>
+    </div>
+  </div>
+  </section>
+  <!-- trivia section end -->
 
     <!-- footer section start -->
 

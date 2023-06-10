@@ -158,7 +158,161 @@ nav #close {
   letter-spacing: 2px;
 }
 
-/*team style*/
+/* trivia */
+.trivia {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.trivia .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.trivia .image {
+  margin-bottom: 20px;
+}
+
+.trivia .heading {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#trivia-container {
+  margin-top: 30px;
+}
+
+#trivia-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+#trivia-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #00ff1ebe;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+#trivia-button:hover {
+  background-color: #ff5500;
+}
+
+
+/* article section */
+.article {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.article-box {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.article-box:hover {
+  transform: translateY(-5px);
+}
+
+.article-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 20px;
+}
+
+.article-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.article-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.content-paragraph {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #00ff1ebe;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+#refreshing-drink-para, #chimichurri-para, #baked-potato-para {
+  text-align: justify;
+}
+.read-more:hover {
+  background-color: #e65c00;
+}
+.hidden {
+  display: none;
+}
+.expanded {
+  overflow: visible;
+}
+.read-less {
+  background-color: #e65c00;
+}
+
+.read-less:hover {
+  background-color: #00ff1ebe;
+}
+.toggle-button {
+  display: inline-block;
+  margin-top: 60px; 
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #00ff1ebe;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #e65c00;
+}
+
+.toggle-button.less {
+  background-color: #00ff1ebe;
+}
+
+.toggle-button.less:hover {
+  background-color: #e65c00;
+}
 
 .heading {
   font-size: 5rem;
@@ -167,65 +321,6 @@ nav #close {
 
 .heading span {
   color: var(--font-heading);
-}
-
-.team .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2rem;
-  padding: 2.5rem 0;
-}
-.team .container .team-box {
-  width: auto;
-  cursor: pointer;
-}
-.team .container .team-box .team-img {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  border-radius: 1rem;
-}
-.team .container .team-box .team-img img {
-  width: 100%;
-}
-.team .container .team-box .team-img:hover img {
-  transform: scale(1.1);
-}
-.team .container .team-box .team-content {
-  box-shadow: 3px 3px 10px rgba(179, 179, 179, 0.2);
-  text-align: center;
-  width: 80%;
-  position: relative;
-  top: -10%;
-  z-index: 2;
-  background: var(--white);
-  left: 10%;
-  border-radius: 0.8rem;
-}
-.team .container .team-box .team-content h3 {
-  font-size: 2rem;
-  color: var(--black);
-  padding: 1.2rem 0;
-}
-.team .container .team-box .team-content p {
-  font-size: 1.5rem;
-  padding: 1.2rem 0;
-}
-.team .container .team-box .team-content .social a {
-  display: inline-block;
-  margin: 0.7rem;
-  width: 4rem;
-  height: 4rem;
-  background: var(--bg);
-  color: #fff;
-  line-height: 4rem;
-  font-size: 1.5rem;
-}
-.team .container .team-box .team-content .social a:hover {
-  border-radius: 100%;
-}
-.team .container .team-box:hover .team-content {
-  transform: translateY(-1rem);
 }
 
 /*footer style*/
