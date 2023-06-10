@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nutriwise - Menu</title>
-  <link rel="stylesheet" href="src/css/menu.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutriwise - Menu</title>
+    <link rel="stylesheet" href="src/css/menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="header" id="home">
+      <nav id="navbar">
+        <a href="#" class="logo"><img src="src/img/bg.png" /></a>
 
-  <div class="search-container">
-    <h1>Menu Page</h1>
-    <p>Find the best recipe for ur favorite food</p>
-    <form id="search-form">
-      <input type="text" id="search-input" placeholder="Search recipes...">
-      <button type="submit">Search</button>
-    </form>
-  </div>
+        <div class="links" id="nav">
+          <a href="#home">home</a>
+          <a href="#about">about</a>
+          <a href="#menu">menu</a>
+          <a href="#team">team</a>
+        </div>
 
-  <section id="recipe-results">
-    <h2>Search Results</h2>
-    <div id="recipe-list"></div>
-  </section>
+        <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+        <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+      </nav>
 
-  <section id="recommendations">
-    <h2>Recommendations</h2>
-    <div id="recommendation-list"></div>
-  </section>
+      <div class="content"></div>
+    </div>
 
-  <script src="src/js/script.js"></script>
-</body>
+    <div class="search-container">
+      <h1>Menu Page</h1>
+      <p>Find the best recipe for ur favorite food</p>
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search recipes..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <section id="recipe-results">
+      <h2>Search Results</h2>
+      <div id="recipe-list"></div>
+    </section>
+
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div id="recommendation-list"></div>
+    </section>
+
+    <script src="src/js/script.js"></script>
+    <script src="src/js/nav.js"></script>
+  </body>
 </html>
