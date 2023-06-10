@@ -194,3 +194,40 @@ h2 {
   margin-bottom: 5px;
   text-align: left;
 }
+
+@media only screen and (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  nav {
+    padding: 1rem 3rem;
+  }
+  .content {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  nav #menu-btn {
+    display: inline-block;
+  }
+  nav .links {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    padding: 1rem;
+    transition: 0.5s;
+  }
+  nav .links a::after {
+    display: none;
+  }
+  nav .links a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 1.2rem;
+    background: greenyellow;
+  }
+}
