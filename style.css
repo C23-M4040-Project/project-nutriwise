@@ -111,7 +111,6 @@ nav #close {
 }
 
 /*about style*/
-
 .about .container {
   display: flex;
   justify-content: space-evenly;
@@ -158,9 +157,80 @@ nav #close {
   letter-spacing: 2px;
 }
 
+.about .heading {
+  margin-bottom: 20px;
+}
+
+/*calculator style*/
+.calculator .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.calculator .container .image {
+  flex-basis: 50%;
+  background: url(img/calories-count.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 16rem 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator .container .calculator-content {
+  flex-basis: 40%;
+  padding-top: 4rem;
+}
+.calculator .container .calculator-content h4 {
+  color: var(--bg);
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.calculator .container .calculator-content h1 {
+  font-size: 4rem;
+  color: var(--font-heading);
+  padding: 1rem 0;
+}
+.calculator .container .calculator-content h3 {
+  color: var(--black);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 1rem 0;
+}
+.calculator .container .calculator-content p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--black);
+  line-height: 1.5;
+  text-align: justify;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.calculator .heading {
+  margin-bottom: 20px;
+}
+
+#calculator-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #00ff1ebe;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+#calculator-button:hover {
+  background-color: #ff5500;
+}
+
+
 /* trivia */
 .trivia {
-  background-color: #fff;
   padding: 40px 0;
 }
 
@@ -172,14 +242,14 @@ nav #close {
   text-align: center;
 }
 
-.trivia .image {
+.trivia .image img {
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .trivia .heading {
   font-size: 32px;
   color: #333;
-  margin-bottom: 10px;
 }
 
 #trivia-container {
@@ -189,7 +259,8 @@ nav #close {
 #trivia-text {
   font-size: 20px;
   margin-bottom: 20px;
-  color: #666;
+  font-weight: bold;
+  color: var(--font-heading);
 }
 
 #trivia-button {
@@ -206,7 +277,6 @@ nav #close {
 #trivia-button:hover {
   background-color: #ff5500;
 }
-
 
 /* article section */
 .article {
@@ -271,7 +341,9 @@ nav #close {
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
-#refreshing-drink-para, #chimichurri-para, #baked-potato-para {
+#refreshing-drink-para,
+#chimichurri-para,
+#baked-potato-para {
   text-align: justify;
 }
 .read-more:hover {
@@ -292,7 +364,7 @@ nav #close {
 }
 .toggle-button {
   display: inline-block;
-  margin-top: 60px; 
+  margin-top: 60px;
   padding: 10px 20px;
   font-size: 14px;
   text-decoration: none;
@@ -323,13 +395,21 @@ nav #close {
   color: var(--font-heading);
 }
 
+.heading-trivia {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.heading-trivia span {
+  color: var(--font-heading);
+}
+
 /*footer style*/
 
 .footer {
   width: 100%;
-  height: auto;
+  height: 100%;
   background: #eeeeee;
-  /* background: url(img/backf.jpg); */
   font-family: "Nunito", sans-serif;
   font-weight: 6000;
   background-size: cover;
@@ -410,6 +490,12 @@ nav #close {
     flex-direction: column;
   }
   .about .container .about-content {
+    text-align: center;
+  }
+  .calculator .container {
+    flex-direction: column;
+  }
+  .calculator .container .calculator-content {
     text-align: center;
   }
 }

@@ -43,9 +43,9 @@
 
     <!-- about section start -->
     <section class="about" id="about">
+      <h1 class="heading">About <span>US</span></h1>
       <div class="container">
         <div class="image"></div>
-
         <div class="about-content">
           <h4>Nutriwise is here to provide a solution.</h4>
           <h1>
@@ -73,94 +73,113 @@
           <div class="article-content">
             <h3>A Chimichurri You'll Want to Put on Everything</h3>
             <p id="chimichurri-para" class="content-paragraph">
-              Chimichurri is a vibrant and flavorful sauce that originates from Argentina.
-              It's made with fresh herbs like parsley and cilantro, garlic, vinegar, and olive oil, resulting in a tangy
-              and herbaceous condiment that pairs perfectly with grilled meats, vegetables, and more.
+              Chimichurri is a vibrant and flavorful sauce that originates from Argentina. It's made with fresh herbs like parsley and cilantro, garlic, vinegar, and olive oil, resulting in a tangy and herbaceous condiment that pairs
+              perfectly with grilled meats, vegetables, and more.
             </p>
-            <a href="#" class="toggle-button" onclick="toggleReadMore('chimichurri-para')">Read More</a>
+            <a href="#article" class="toggle-button" onclick="toggleReadMore('chimichurri-para')">Read More</a>
           </div>
         </div>
-  
+
         <div class="article-box">
           <div class="article-img">
             <img src="img/drink.jpg" />
           </div>
           <div class="article-content">
             <h3>A Refreshing Drink To Welcome You All</h3>
-              <p id="refreshing-drink-para" class="content-paragraph">
-                Looking for a cool and revitalizing beverage to quench your thirst? This refreshing drink is the perfect choice to welcome you all,
-                especially during hot summer days. Packed with fruity flavors and a hint of mint, it's sure to leave you feeling refreshed and revitalized.
-              </p>
-            <a href="#" class="toggle-button" onclick="toggleReadMore('refreshing-drink-para')">Read More</a>
-          </div>          
+            <p id="refreshing-drink-para" class="content-paragraph">
+              Looking for a cool and revitalizing beverage to quench your thirst? This refreshing drink is the perfect choice to welcome you all, especially during hot summer days. Packed with fruity flavors and a hint of mint, it's sure to
+              leave you feeling refreshed and revitalized.
+            </p>
+            <a href="#article" class="toggle-button" onclick="toggleReadMore('refreshing-drink-para')">Read More</a>
+          </div>
         </div>
-  
-        <div class="article-box">
+
+        <div class="article-box" id="article">
           <div class="article-img">
             <img src="img/potato.jpg" />
           </div>
           <div class="article-content">
             <h3>For a Baked Potato (fluffy every time when using this trick)</h3>
             <p id="baked-potato-para" class="content-paragraph">
-              There's nothing quite like a perfectly baked potato with a fluffy interior and a crispy skin. If you've ever struggled to achieve that ideal texture,
-              we have a foolproof trick that will guarantee a fluffy baked potato every time.
+              There's nothing quite like a perfectly baked potato with a fluffy interior and a crispy skin. If you've ever struggled to achieve that ideal texture, we have a foolproof trick that will guarantee a fluffy baked potato every
+              time.
             </p>
-            <a href="#" class="toggle-button" onclick="toggleReadMore('baked-potato-para')">Read More</a>
+            <a href="#article" class="toggle-button" onclick="toggleReadMore('baked-potato-para')">Read More</a>
           </div>
         </div>
-    </section>
-  <!-- artikel section end -->
+        <!-- artikel section end -->
 
-  <!-- trivia section start -->
-  <section class="trivia" id="trivia">
-    <div class="container">
-      <div class="image">
-    <!-- Gambar trivia (ganti dengan gambar menarik) -->
-    <img src="img/foodtrivia.webp" alt="Trivia Image" style="max-width: 600px;">
-    </div>
+        <!-- trivia section start -->
+        <section class="trivia" id="trivia">
+          <div class="container">
+            <div class="image">
+              <h1 class="heading-trivia">Food <span>Trivia</span></h1>
+              <img src="img/trivia.jpg" alt="Trivia Image" style="max-width: 600px" />
+            </div>
 
-    <h1 class="heading">Did You Know?</h1>
-    <div id="trivia-container">
-    <p id="trivia-text">Loading trivia...</p>
-      <button id="trivia-button" onclick="getRandomTrivia()">Get Random Trivia</button>
-    </div>
-  </div>
-  </section>
-  <!-- trivia section end -->
-
-    <!-- footer section start -->
-
-    <section class="footer" id="footer">
-      <div class="container">
-        <div class="footer-box">
-          <h3>about us</h3>
-          <p>
-            Nutriwise is here to provide a solution to provide complete information about healthy food and the right diet. By presenting high-quality articles, it can be in the form of a guide to help users choose the right and healthy
-            food.
-          </p>
-          <p>copyright &copy;2023 all rights reserved by | <a href="https://dicoding.co.id/"> Nutriwise </a></p>
-        </div>
-
-        <div class="footer-box">
-          <h3>Our Service</h3>
-          <p><b>Serving highly nutritious food recipes</b></p>
-          <p><b>Serving food that make your body healthier</b></p>
-          <p><b>Serving low calorie food recipes</b></p>
-          <p><b>Nutritional content listed</b></p>
-        </div>
-
-        <div class="footer-box">
-          <h3>Follow Us</h3>
-          <div>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <h1 class="heading">Did You Know?</h1>
+            <div id="trivia-container">
+              <p id="trivia-text">Loading trivia...</p>
+              <button id="trivia-button" onclick="getRandomTrivia()">Get Random Trivia</button>
+            </div>
           </div>
-        </div>
+        </section>
+        <!-- trivia section end -->
+
+        <!-- calculator section start -->
+        <section class="calculator" id="calculator">
+          <div class="container">
+            <div class="image"></div>
+
+            <div class="calculator-content">
+              <h1>Count Your Calories !</h1>
+              <p>
+                Counting calories plays a crucial role in maintaining a healthy lifestyle and achieving one's fitness goals. By tracking and understanding our calorie intake, we gain control over our nutrition and weight. It empowers us to
+                make informed choices about the food we consume, promoting mindfulness and preventing overeating. Through calorie counting, we become more aware of portion sizes and ensure we're getting the right balance of nutrients for
+                our bodies. It aids in weight management and helps us achieve a healthy body composition. By embracing the importance of calorie counting, we can establish long-term health benefits and develop a greater understanding of our
+                overall dietary patterns.
+              </p>
+              <button id="calculator-button"><a href="https://gendhismanis.id/kalkulatorkalori.html" target="_blank">Calories Calculator</a></button>
+            </div>
+          </div>
+        </section>
+        <!-- calculator section end -->
+
+        <!-- footer section start -->
+
+        <section class="footer" id="footer">
+          <div class="container">
+            <div class="footer-box">
+              <h3>about us</h3>
+              <p>
+                Nutriwise is here to provide a solution to provide complete information about healthy food and the right diet. By presenting high-quality articles, it can be in the form of a guide to help users choose the right and healthy
+                food.
+              </p>
+              <p>copyright &copy;2023 all rights reserved by | <a href="https://dicoding.co.id/"> Nutriwise </a></p>
+            </div>
+
+            <div class="footer-box">
+              <h3>Our Service</h3>
+              <p><b>Serving highly nutritious food recipes</b></p>
+              <p><b>Serving food that make your body healthier</b></p>
+              <p><b>Serving low calorie food recipes</b></p>
+              <p><b>Nutritional content listed</b></p>
+            </div>
+
+            <div class="footer-box">
+              <h3>Follow Us</h3>
+              <div>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- footer section ends -->
+        <script src="script.js"></script>
       </div>
     </section>
-    <!-- footer section ends -->
-    <script src="nav.js"></script>
   </body>
 </html>
