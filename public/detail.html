@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Program Diet</title>
-    <link rel="stylesheet" href="detail-style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="detail-style.css" />
+  </head>
+  <body>
+    <div class="header" id="home">
+      <nav id="navbar">
+        <a href="#" class="logo"><img src="bg.png" /></a>
+
+        <div class="links" id="nav">
+          <a href="#home">home</a>
+          <a href="#about">about</a>
+          <a href="#menu">menu</a>
+          <a href="#team">team</a>
+        </div>
+
+        <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+        <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+      </nav>
+
+      <div class="content"></div>
+    </div>
     <header>
-        <h1>Detail Program Diet</h1>
+      <h1>Detail Program Diet</h1>
     </header>
 
     <main>
-        <section id="program-info">
-            <h2>Program Diet</h2>
-            <div id="program-details"></div>
-        </section>
+      <section id="program-info">
+        <h2>Program Diet</h2>
+        <div id="program-details"></div>
+      </section>
     </main>
 
     <script src="script.js"></script>
-</body>
+    <script src="nav.js"></script>
+  </body>
 </html>
