@@ -94,6 +94,16 @@ nav #close {
   font-size: 1.4rem;
   cursor: pointer;
   display: none;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}
+#menu-btn {
+  display: block;
+}
+
+#close {
+  display: none;
 }
 .header .content {
   padding: 100px 7%;
@@ -312,5 +322,12 @@ nav #close {
     margin: 1rem;
     font-size: 1.2rem;
     background: greenyellow;
+  }
+}
+
+@media (min-width: 768px) {
+  nav #menu-btn,
+  nav #close {
+    display: none;
   }
 }
