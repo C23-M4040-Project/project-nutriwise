@@ -12,6 +12,12 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  /* background: linear-gradient(to bottom, #81f681, #c2ffc2);	
+  fallback for older browsers	
+  background: -webkit-linear-gradient(top, #81f681, #c2ffc2);	
+  background: -moz-linear-gradient(top, #81f681, #c2ffc2);	
+  background: -o-linear-gradient(top, #81f681, #c2ffc2);	
+  background-attachment: fixed; */
 }
 
 * {
@@ -126,6 +132,7 @@ nav #close {
 }
 
   .search-container {
+    margin-top: 2rem;
     padding: 1rem 0 0.3rem;
     text-align: center;
   }
@@ -150,22 +157,25 @@ nav #close {
   }
   
   button[type="submit"] {
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #81f681;
+    padding: 8px 20px;
     font-size: large;
     font-weight: bold;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     transition-property: background-color, color;
     transition-duration: 0.3s;
     transition-delay: 0.2s;
+    border: 2px solid black;
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    border-color: #04AA6D;
+    color: green;
   }
   
   button[type="submit"]:hover {
-    background-color: #55ee2b;
-    color: #fff;
+    background-color: #04AA6D;
+    color: white;
   }
 
   h1 {
@@ -225,24 +235,28 @@ nav #close {
   
   .recipe-card a {
     margin-top: auto;
+    margin-bottom: 10px;
     padding: 10px 20px;
-    background-color: #fff;
-    color: #009200;
+    /* background-color: #fff;
+    color: #009200; */
     font-weight: bold;
     text-decoration: none;
     border-radius: 50px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition-property: background-color, border, box-shadow, color;
-    border: 2px solid #009200;
+    transition-property: background-color, color;
     transition-duration: 0.3s;
     transition-delay: 0.2s;
+    border: 2px solid black;
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    border-color: #04AA6D;
+    color: green;
   }
   
   .recipe-card a:hover {
-    /* background-color: #89fd69; */
-    background-color: #55ee2b;
+    background-color: #04AA6D;
     transition-delay: 0s;
-    border: 2px solid #81f681;
     color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 
