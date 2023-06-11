@@ -101,7 +101,7 @@ function createRecommendationCard(recommendation) {
 
 // Initialize the page with some recipes
 async function initializePage() {
-  const response = await fetch(`${API_ENDPOINT}/complexSearch?apiKey=${API_KEY}&number=8`);
+  const response = await fetch(`${API_ENDPOINT}/complexSearch?apiKey=${API_KEY}&number=12`);
   const data = await response.json();
   displayRecipes(data.results);
 }

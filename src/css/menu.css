@@ -20,11 +20,6 @@ body {
   background-attachment: fixed;
 }
 
-header {
-  background-color: #f2f2f2;
-  padding: 20px;
-  text-align: center;
-}
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -64,7 +59,7 @@ nav {
   background: white;
 }
 nav .logo img {
-  width: 90px;
+  width: 50px;
   height: auto;
 }
 nav .links a {
