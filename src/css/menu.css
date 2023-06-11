@@ -1,21 +1,108 @@
-/* Add your custom styles here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/*font-family: 'Roboto', sans-serif;*/
+
+:root {
+  --font-heading: #41b634;
+  --black: #222222;
+  --bg: #43b634;
+  --white: #fff;
+}
+
 body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #81f681, #c2ffc2);
-    /* fallback for older browsers */
-    background: -webkit-linear-gradient(top, #81f681, #c2ffc2);
-    background: -moz-linear-gradient(top, #81f681, #c2ffc2);
-    background: -o-linear-gradient(top, #81f681, #c2ffc2);
-    background-attachment: fixed;
-  }
-  
-  header {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-  }
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #81f681, #c2ffc2);
+  /* fallback for older browsers */
+  background: -webkit-linear-gradient(top, #81f681, #c2ffc2);
+  background: -moz-linear-gradient(top, #81f681, #c2ffc2);
+  background: -o-linear-gradient(top, #81f681, #c2ffc2);
+  background-attachment: fixed;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+section {
+  padding: 8rem 7%;
+}
+.header {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: white;
+}
+nav .logo img {
+  width: 90px;
+  height: auto;
+}
+nav .links a {
+  color: var(--black);
+  font-size: 1.2rem;
+  margin-right: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+nav .links a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: green;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  transition: 0.4s;
+}
+nav .links a:hover::after {
+  width: 100%;
+}
+nav #menu-btn,
+nav #close {
+  color: var(--black);
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: none;
+}
+.header .content {
+  padding: 100px 7%;
+  color: rgb(17, 146, 8);
+}
+
+.nav-change {
+  background: rgba(249, 241, 241, 0.5);
+}
 
   .search-container {
     padding: 1rem 0 0.3rem;
@@ -159,31 +246,61 @@ body {
       margin: 0 9rem;
     }
 
-    .recipe-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-
-    .recipe-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #f2f2f2;
-      padding: 0.8rem 0.8rem 1.2rem;
-      border-radius: 5px;
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    h2 {
-      text-align: center;
-    }
+  .recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
   }
 
-  @media (max-width: 630px) {
-    #recipe-list,  #recommendation-list {
-      grid-template-columns: 1fr;
-      margin: 0 5rem;
-    }
+  .recipe-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 0.8rem 0.8rem 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  nav {
+    padding: 1rem 3rem;
+  }
+  .content {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  nav #menu-btn {
+    display: inline-block;
+  }
+  nav .links {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    padding: 1rem;
+    transition: 0.5s;
+  }
+  nav .links a::after {
+    display: none;
+  }
+  nav .links a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 1.2rem;
+    background: greenyellow;
+  }
+}
