@@ -239,10 +239,17 @@ nav #close {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+
+  @media (max-width: 630px) {
+    #recipe-list,  #recommendation-list {
+      grid-template-columns: 1fr;
+      margin: 0 5rem;
+    }
+  }
   
   @media (max-width: 768px) {
     #recipe-list,  #recommendation-list {
-      grid-template-columns: 1fr;
+      grid-template-columns: 2fr;
       margin: 0 9rem;
     }
 
@@ -250,6 +257,8 @@ nav #close {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    border-end-end-radius: 0px ;
+    border-end-start-radius: 0px;
   }
 
   .recipe-card {
@@ -257,10 +266,11 @@ nav #close {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: #f2f2f2;
-    padding: 0.8rem 0.8rem 1.2rem;
+    background-color: #fff;
+    padding: 0rem 0rem 1.2rem;
     border-radius: 5px;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 2rem;
   }
 
   h2 {
