@@ -1,6 +1,6 @@
 /* Add your custom styles here */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #81f681, #c2ffc2);
@@ -22,6 +22,44 @@ body {
     text-align: center;
   }
   
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  #search-input {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #search-input:focus {
+    outline: none;
+    border-color: #006400;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #81f681;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-delay: 0.2s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #55ee2b;
+    color: #fff;
+  }
+
   h1 {
     margin: 0;
   }
@@ -41,13 +79,14 @@ body {
   }
   
   h2 {
-    margin-top: 0;
+    margin: 0 2rem 1rem;
   }
   
   #recipe-list, #recommendation-list {
     display: grid;
     grid-gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0 2rem;
   }
 
   .recipe-card {
@@ -55,8 +94,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: #f2f2f2;
-    padding: 0.8rem 0.8rem 1.2rem;
+    background-color: #fff;
+    padding: 0rem 0rem 1.2rem;
     border-radius: 5px;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   }
@@ -65,24 +104,27 @@ body {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    border-end-end-radius: 0px ;
+    border-end-start-radius: 0px;
   }
   
   .recipe-card h3 {
     margin-top: 0;
     margin: 1rem 0;
     text-align: center;
+    padding: 10px 20px;
   }
   
   .recipe-card a {
     margin-top: auto;
     padding: 10px 20px;
-    background-color: #81f681;
+    background-color: #fff;
     color: #009200;
     font-weight: bold;
     text-decoration: none;
     border-radius: 50px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition-property: background-color, border;
+    transition-property: background-color, border, box-shadow, color;
     border: 2px solid #009200;
     transition-duration: 0.3s;
     transition-delay: 0.2s;
@@ -93,6 +135,9 @@ body {
     background-color: #55ee2b;
     transition-delay: 0s;
     border: 2px solid #81f681;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
   }
 
   .recommendation-card {
@@ -102,7 +147,7 @@ body {
     justify-content: center;
     justify-items: center;
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: #fff;
     padding: 1rem 1.5rem;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -135,4 +180,10 @@ body {
       text-align: center;
     }
   }
-  
+
+  @media (max-width: 630px) {
+    #recipe-list,  #recommendation-list {
+      grid-template-columns: 1fr;
+      margin: 0 5rem;
+    }
+  }
