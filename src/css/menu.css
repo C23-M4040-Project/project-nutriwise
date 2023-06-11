@@ -12,12 +12,6 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #81f681, #c2ffc2);
-  /* fallback for older browsers */
-  background: -webkit-linear-gradient(top, #81f681, #c2ffc2);
-  background: -moz-linear-gradient(top, #81f681, #c2ffc2);
-  background: -o-linear-gradient(top, #81f681, #c2ffc2);
-  background-attachment: fixed;
 }
 
 * {
@@ -42,9 +36,7 @@ section {
 }
 .header {
   width: 100%;
-  height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100vh;
 }
 nav {
   display: flex;
@@ -101,8 +93,32 @@ nav #close {
   display: none;
 }
 .header .content {
-  padding: 100px 7%;
+  padding: 150px 7%;
   color: rgb(17, 146, 8);
+}
+.header .content h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 3rem 0;
+}
+.header .content h1 {
+  font-weight: bold;
+  font-size: 5rem;
+  letter-spacing: 2px;
+}
+.btn {
+  padding: 1.3rem 5rem;
+  margin: 3rem 0;
+  color: var(--black);
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: 0.1rem solid var(--white);
+  cursor: pointer;
+}
+.btn:hover {
+  background: none;
+  color: var(--white);
 }
 
 .nav-change {

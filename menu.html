@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" rel="stylesheet" />
 
     <title>Nutriwise - Menu</title>
     <link rel="stylesheet" href="src/css/menu.css" />
@@ -17,7 +17,7 @@
     />
   </head>
   <body>
-    <div class="header" id="home">
+    <div class="header" id="home" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(src/img/backh.jpg); background-repeat: no-repeat; background-size: cover">
       <nav id="navbar">
         <a href="#" class="logo"><img src="src/img/bg.png" /></a>
 
@@ -32,7 +32,11 @@
         <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
       </nav>
 
-      <div class="content"></div>
+      <div class="content">
+        <h3>Make a Fresh</h3>
+        <h1>Diet Food<br />in a Easy Way</h1>
+        <button class="btn">Explore</button>
+      </div>
     </div>
 
     <div class="search-container">
@@ -44,15 +48,15 @@
       </form>
     </div>
 
-  <section id="recipe-results">
-    <h2>Special Recipe For You</h2>
-    <div id="recipe-list"></div>
-  </section>
+    <section id="recipe-results">
+      <h2>Special Recipe For You</h2>
+      <div id="recipe-list"></div>
+    </section>
 
-  <section id="recommendations">
-    <h2>Recommendations Recipe</h2>
-    <div id="recommendation-list"></div>
-  </section>
+    <section id="recommendations">
+      <h2>Recommendations Recipe</h2>
+      <div id="recommendation-list"></div>
+    </section>
 
     <script src="src/js/script.js"></script>
     <script src="src/js/nav.js"></script>
