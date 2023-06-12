@@ -152,6 +152,9 @@ h2 {
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
+  border-style: solid;
+  border-color: #222222;
+  border-width: 2px;
   margin-bottom: 10px;
 }
 
@@ -163,6 +166,27 @@ h2 {
 .program-card p {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.instructions-container {
+  margin-top: 20px;
+}
+
+.instructions-container h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.instructions-container ul {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+.instructions-container li {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: left;
 }
 
 .ingredients-container {

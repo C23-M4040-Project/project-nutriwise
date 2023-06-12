@@ -40,8 +40,6 @@ function change() {
   }
 }
 
-window.addEventListener("scroll", change);
-
 window.addEventListener('DOMContentLoaded', () => {
   const programDetailsContainer = document.getElementById('program-details');
 
@@ -50,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const API_KEY = 'd7e900eb3f384a33841f51cf7038e120';
 
     try {
-      const response = await fetch(`https://api.spoonacular.com/recipes/716429/information?apiKey=${API_KEY}&includeNutrition=true`);
+      const response = await fetch(`https://api.spoonacular.com/recipes/644387/information?apiKey=${API_KEY}&includeNutrition=true`);
 
       if (!response.ok) {
         throw new Error('Error fetching program details');
@@ -83,7 +81,25 @@ window.addEventListener('DOMContentLoaded', () => {
     const programDescription = document.createElement('p');
     programDescription.innerHTML = program.summary;
     programCard.appendChild(programDescription);
-  
+    
+    // Display instructions
+    const instructionsContainer = document.createElement('div');
+    instructionsContainer.classList.add('instructions-container');
+    const instructionsTitle = document.createElement('h4');
+    instructionsTitle.textContent = 'Instructions';
+    instructionsContainer.appendChild(instructionsTitle);
+
+    const instructionsList = document.createElement('ul');
+    for (const step of program.analyzedInstructions[0].steps) {
+      const instructionsItem = document.createElement('li');
+      instructionsItem.textContent = `${step.step}`;
+      instructionsList.appendChild(instructionsItem);
+    }
+
+    instructionsContainer.appendChild(instructionsList);
+    programCard.appendChild(instructionsContainer);
+
+
     // Display extended ingredients
     const ingredientsContainer = document.createElement('div');
     ingredientsContainer.classList.add('ingredients-container');
@@ -100,7 +116,7 @@ window.addEventListener('DOMContentLoaded', () => {
   
     ingredientsContainer.appendChild(ingredientsList);
     programCard.appendChild(ingredientsContainer);
-  
+
     // Display nutrition details
     const nutritionContainer = document.createElement('div');
     nutritionContainer.classList.add('nutrition-container');
@@ -125,3 +141,4 @@ window.addEventListener('DOMContentLoaded', () => {
   // Fetch program details when the page loads
   fetchProgramDetails();
 });
+
