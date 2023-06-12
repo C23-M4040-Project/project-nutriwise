@@ -35,22 +35,41 @@ function displayRecipes(recipes) {
 }
 
 // Create recipe card
+// function createRecipeCard(recipe) {
+//   const recipeCard = document.createElement('div');
+//   recipeCard.className = 'recipe-card';
+
+//   const image = document.createElement('img');
+//   image.src = recipe.image;
+//   recipeCard.appendChild(image);
+
+//   const title = document.createElement('h3');
+//   title.textContent = recipe.title;
+//   recipeCard.appendChild(title);
+
+//   const link = document.createElement('a');
+//   link.textContent = 'View Recipe';
+//   link.href = recipe.id;
+//   recipeCard.appendChild(link);
+
+//   recipeCard.addEventListener('click', () => {
+//     getRecipeInformation(recipe.id);
+//   });
+
+//   return recipeCard;
+// }
+
 function createRecipeCard(recipe) {
   const recipeCard = document.createElement('div');
   recipeCard.className = 'recipe-card';
 
-  const image = document.createElement('img');
-  image.src = recipe.image;
-  recipeCard.appendChild(image);
+  const recipeCardHTML = `
+    <img src="${recipe.image}" alt="${recipe.title}">
+    <h3>${recipe.title}</h3>
+    <a href="#recipe-info">View Recipe</a>
+  `;
 
-  const title = document.createElement('h3');
-  title.textContent = recipe.title;
-  recipeCard.appendChild(title);
-
-  const link = document.createElement('a');
-  link.textContent = 'View Recipe';
-  link.href = recipe.sourceUrl;
-  recipeCard.appendChild(link);
+  recipeCard.insertAdjacentHTML('beforeend', recipeCardHTML);
 
   recipeCard.addEventListener('click', () => {
     getRecipeInformation(recipe.id);
