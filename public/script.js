@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const API_KEY = 'd7e900eb3f384a33841f51cf7038e120';
 
     try {
-      const response = await fetch(`https://api.spoonacular.com/recipes/644387/information?apiKey=${API_KEY}&includeNutrition=true`);
+      const response = await fetch(`https://api.spoonacular.com/recipes/{id}/information?apiKey=${API_KEY}&includeNutrition=true`);
 
       if (!response.ok) {
         throw new Error('Error fetching program details');
