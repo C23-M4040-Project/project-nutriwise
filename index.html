@@ -112,22 +112,17 @@
         </div>
         <!-- artikel section end -->
 
-        <!-- trivia section start -->
-        <section class="trivia" id="trivia">
-          <div class="container">
-            <div class="image">
-              <h1 class="heading-trivia">Food <span>Trivia</span></h1>
-              <img src="img/trivia.jpg" alt="Trivia Image" style="max-width: 600px" />
-            </div>
-
-            <h1 class="heading">Did You Know?</h1>
-            <div id="trivia-container">
-              <p id="trivia-text">Loading trivia...</p>
-              <button id="trivia-button" onclick="getRandomTrivia()">Get Random Trivia</button>
-            </div>
-          </div>
-        </section>
-        <!-- trivia section end -->
+      <!-- trivia section start -->
+      <div class="card-trivia">
+        <h1 class="heading">Fooda<span>Trivia</span></h1>
+        <img src="./img/trivia.jpg" alt="Trivia Image" />
+        <div class="card-content">
+          <h3 class="card-subheading">Did You Know?</h3>
+          <p class="card-text" id="trivia-text">Loading trivia...</p>
+          <button class="card-button" onclick="getRandomTrivia()" id="trivia-button">Get Random Trivia</button>
+        </div>
+      </div>
+       <!-- trivia section end -->
 
         <!-- calculator section start -->
         <section class="calculator" id="calculator">
