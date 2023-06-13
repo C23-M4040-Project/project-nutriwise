@@ -245,6 +245,7 @@ h2 {
     margin-left: 6rem;
   }
 }
+
 @media only screen and (max-width: 768px) {
   nav #menu-btn {
     display: inline-block;
@@ -272,17 +273,14 @@ h2 {
   .nutrition-container ul {
     margin-left: 3rem;
   }
+  .nutrition-container li {
+    flex: 50%;
+  }
 }
 
 @media (min-width: 768px) {
   nav #menu-btn,
   nav #close {
     display: none;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .nutrition-container li {
-    flex: 50%;
   }
 }
