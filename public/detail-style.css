@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/*font-family: 'Roboto', sans-serif;*/
+
+:root {
+  --font-heading: #41b634;
+  --black: #222222;
+  --bg: #43b634;
+  --white: #fff;
+}
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+section {
+  padding: 8rem 7%;
+}
+.header {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: white;
+}
+nav .logo img {
+  width: 90px;
+  height: auto;
+}
+nav .links a {
+  color: var(--black);
+  font-size: 1.2rem;
+  margin-right: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+nav .links a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: green;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  transition: 0.4s;
+}
+nav .links a:hover::after {
+  width: 100%;
+}
+nav #menu-btn,
+nav #close {
+  color: var(--black);
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}
+#menu-btn {
+  display: block;
+}
+
+#close {
+  display: none;
+}
+.header .content {
+  padding: 70px 7%;
+  color: rgb(17, 146, 8);
+}
+.btn:hover {
+  background: none;
+  color: var(--white);
+}
+.nav-change {
+  background: rgba(249, 241, 241, 0.5);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+#program-info {
+  margin-top: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#program-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.program-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.program-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #222222;
+  border-width: 2px;
+  margin-bottom: 10px;
+}
+
+.program-card h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.program-card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.instructions-container {
+  margin-top: 30px;
+}
+
+.instructions-container h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.instructions-container ul {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+.instructions-container li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.ingredients-container {
+  margin-top: 30px;
+}
+
+.ingredients-container h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.ingredients-container ul {
+  padding: 0;
+}
+
+.ingredients-container li {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.nutrition-container {
+  margin-top: 30px;
+}
+
+.nutrition-container h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.nutrition-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-left: 20rem;
+}
+
+.nutrition-container li {
+  flex: 0 0 33.3%;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  nav {
+    padding: 1rem 3rem;
+  }
+  .content {
+    text-align: center;
+  }
+  .nutrition-container ul {
+    margin-left: 6rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav #menu-btn {
+    display: inline-block;
+  }
+  nav .links {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    padding: 1rem;
+    transition: 0.5s;
+  }
+  nav .links a::after {
+    display: none;
+  }
+  nav .links a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 1.2rem;
+    background: greenyellow;
+  }
+  .nutrition-container ul {
+    margin-left: 3rem;
+  }
+  .nutrition-container li {
+    flex: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  nav #menu-btn,
+  nav #close {
+    display: none;
+  }
+}
