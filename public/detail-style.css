@@ -159,8 +159,8 @@ h2 {
 }
 
 .program-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .program-card p {
@@ -169,13 +169,13 @@ h2 {
 }
 
 .instructions-container {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .instructions-container h4 {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .instructions-container ul {
@@ -185,17 +185,17 @@ h2 {
 
 .instructions-container li {
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   text-align: left;
 }
 
 .ingredients-container {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .ingredients-container h4 {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .ingredients-container ul {
@@ -209,25 +209,25 @@ h2 {
 }
 
 .nutrition-container {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .nutrition-container h4 {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .nutrition-container ul {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin-left: 5rem;
+  margin-left: 20rem;
 }
 
 .nutrition-container li {
   flex: 0 0 33.3%;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   text-align: left;
 }
 
@@ -240,6 +240,9 @@ h2 {
   }
   .content {
     text-align: center;
+  }
+  .nutrition-container ul {
+    margin-left: 6rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -266,11 +269,20 @@ h2 {
     font-size: 1.2rem;
     background: greenyellow;
   }
+  .nutrition-container ul {
+    margin-left: 3rem;
+  }
 }
 
 @media (min-width: 768px) {
   nav #menu-btn,
   nav #close {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nutrition-container li {
+    flex: 50%;
   }
 }
