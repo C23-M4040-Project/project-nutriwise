@@ -3,6 +3,7 @@
 // API endpoint and key
 const API_ENDPOINT = 'https://api.spoonacular.com/recipes';
 const API_KEY = '0ddfb4e413cb4bce9818e436936ed113';
+const max_calories = '400'
 
 // DOM elements
 const searchForm = document.getElementById('search-form');
@@ -21,7 +22,7 @@ searchForm.addEventListener('submit', (e) => {
 // Search recipes
 async function searchRecipes(query) {
   recipeList.innerHTML = '';
-  const response = await fetch(`${API_ENDPOINT}/complexSearch?apiKey=${API_KEY}&query=${query}`);
+  const response = await fetch(`${API_ENDPOINT}/complexSearch?apiKey=${API_KEY}&query=${query}&maxCalories=${max_calories}`);
   const data = await response.json();
   displayRecipes(data.results);
 }
