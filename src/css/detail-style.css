@@ -231,6 +231,50 @@ h2 {
   text-align: left;
 }
 
+.footer {
+  width: 100%;
+  height: auto;
+  background: #eeeeee;
+  font-family: "Nunito", sans-serif;
+  font-weight: 6000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 8rem;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  padding: 2.5 0rem;
+}
+.footer .container .footer-box {
+  padding: 0.5rem 4rem 2rem;
+}
+.footer .container .footer-box h3 {
+  color: rgb(19, 12, 122);
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  padding-bottom: 10px;
+}
+.footer .container .footer-box p {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+  padding: 0.8rem 0;
+  text-align: justify;
+}
+
+.footer .container .footer-box div a {
+  margin: 0.5rem;
+  color: var(--white);
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  background: black;
+}
+
 @media only screen and (max-width: 991px) {
   html {
     font-size: 55%;
@@ -282,5 +326,12 @@ h2 {
   nav #menu-btn,
   nav #close {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .nutrition-container ul {
+    display: grid;
+    margin-left: 3rem;
   }
 }

@@ -27,13 +27,6 @@ html {
 section {
   padding: 8rem 7%;
 }
-.header {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backh.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 nav {
   display: flex;
   align-items: center;
@@ -117,7 +110,7 @@ nav #close {
 }
 .about .container .image {
   flex-basis: 50%;
-  background: url(img/backf.jpg);
+  background: url(../img/backf.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 16rem 0;
@@ -168,7 +161,7 @@ nav #close {
 }
 .calculator .container .image {
   flex-basis: 50%;
-  background: url(img/calories-count.jpg);
+  background: url(../img/calories-count.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 16rem 0;
@@ -284,7 +277,7 @@ nav #close {
 /* article section */
 .article {
   background-color: #f9f9f9;
-  padding: 40px 0;
+  padding: 0;
 }
 
 .container {
@@ -415,21 +408,22 @@ nav #close {
 
 .footer {
   width: 100%;
-  height: 100%;
+  height: auto;
   background: #eeeeee;
   font-family: "Nunito", sans-serif;
   font-weight: 6000;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 8rem;
 }
 .footer .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2rem;
-  padding: 2.5rem 0;
+  padding: 2.5 0rem;
 }
 .footer .container .footer-box {
-  padding: 5rem;
+  padding: 0.5rem 4rem 2rem;
 }
 .footer .container .footer-box h3 {
   color: rgb(19, 12, 122);
@@ -441,7 +435,7 @@ nav #close {
   font-size: 1.7rem;
   line-height: 2.5rem;
   font-weight: 300;
-  padding: 1.2rem 0;
+  padding: 0.8rem 0;
   text-align: justify;
 }
 

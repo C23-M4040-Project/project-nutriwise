@@ -48,8 +48,18 @@ window.addEventListener('DOMContentLoaded', () => {
     const API_KEY = 'd7e900eb3f384a33841f51cf7038e120';
 
     try {
-      const response = await fetch(`https://api.spoonacular.com/recipes/{id}/information?apiKey=${API_KEY}&includeNutrition=true`);
+      const urlParams = new URLSearchParams(window.location.search);
+      const recipeId = urlParams.get('recipeId');
 
+      if (!recipeId) {
+        // Jika query parameter recipeId tidak ditemukan
+        // Lakukan penanganan kesalahan atau tindakan yang sesuai, misalnya:
+        console.log('Error: Recipe ID not found in query parameters.');
+        // Atau alihkan pengguna ke halaman lain, misalnya:
+        window.location.href = 'error.html';
+      }
+      const response = await fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${API_KEY}&includeNutrition=true`);
+      
       if (!response.ok) {
         throw new Error('Error fetching program details');
       }

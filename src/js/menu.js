@@ -46,27 +46,27 @@ window.addEventListener("scroll", change);
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-restricted-syntax */
 // API endpoint and key
-const API_ENDPOINT = 'https://api.spoonacular.com/recipes';
-const API_KEY = '0ddfb4e413cb4bce9818e436936ed113';
-const max_calories = '400'
+const API_ENDPOINT = "https://api.spoonacular.com/recipes";
+const API_KEY = "49e13950a1f243ceacef5d4042116c27";
+const max_calories = "400";
 
 // DOM elements
-const searchForm = document.getElementById('search-form');
-const searchInput = document.getElementById('search-input');
-const recipeList = document.getElementById('recipe-list');
-const recommendationList = document.getElementById('recommendation-list');
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("search-input");
+const recipeList = document.getElementById("recipe-list");
+const recommendationList = document.getElementById("recommendation-list");
 
 // Event listener for form submission
-searchForm.addEventListener('submit', (e) => {
+searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const query = searchInput.value;
   searchRecipes(query);
-  searchInput.value = '';
+  searchInput.value = "";
 });
 
 // Search recipes
 async function searchRecipes(query) {
-  recipeList.innerHTML = '';
+  recipeList.innerHTML = "";
   const response = await fetch(`${API_ENDPOINT}/complexSearch?apiKey=${API_KEY}&query=${query}&maxCalories=${max_calories}`);
   const data = await response.json();
   displayRecipes(data.results);
@@ -106,18 +106,18 @@ function displayRecipes(recipes) {
 // }
 
 function createRecipeCard(recipe) {
-  const recipeCard = document.createElement('div');
-  recipeCard.className = 'recipe-card';
+  const recipeCard = document.createElement("div");
+  recipeCard.className = "recipe-card";
 
   const recipeCardHTML = `
     <img src="${recipe.image}" alt="${recipe.title}">
     <h3>${recipe.title}</h3>
-    <a href="#recipe-info">View Recipe</a>
+    <a href="detail.html?recipeId=${recipe.id}">View Recipe</a>
   `;
 
-  recipeCard.insertAdjacentHTML('beforeend', recipeCardHTML);
+  recipeCard.insertAdjacentHTML("beforeend", recipeCardHTML);
 
-  recipeCard.addEventListener('click', () => {
+  recipeCard.addEventListener("click", () => {
     getRecipeInformation(recipe.id);
   });
 
@@ -132,7 +132,7 @@ async function getRecipeInformation(recipeId) {
 
 // Get recipe recommendations
 async function getRecommendations(recipeId) {
-  recommendationList.innerHTML = '';
+  recommendationList.innerHTML = "";
   const response = await fetch(`${API_ENDPOINT}/${recipeId}/similar?apiKey=${API_KEY}`);
   const data = await response.json();
   displayRecommendations(data);
@@ -140,7 +140,7 @@ async function getRecommendations(recipeId) {
 
 // Display recipe recommendations
 function displayRecommendations(recommendations) {
-  recommendationList.innerHTML = '';
+  recommendationList.innerHTML = "";
   recommendations.forEach((recommendation) => {
     const recommendationCard = createRecommendationCard(recommendation);
     recommendationList.appendChild(recommendationCard);
@@ -149,14 +149,14 @@ function displayRecommendations(recommendations) {
 
 // Create recommendation card
 function createRecommendationCard(recommendation) {
-  const recommendationCard = document.createElement('div');
-  recommendationCard.className = 'recommendation-card';
+  const recommendationCard = document.createElement("div");
+  recommendationCard.className = "recommendation-card";
 
-  const title = document.createElement('h3');
+  const title = document.createElement("h3");
   title.textContent = recommendation.title;
   recommendationCard.appendChild(title);
 
-  recommendationCard.addEventListener('click', async () => {
+  recommendationCard.addEventListener("click", async () => {
     await getRecipeInformation(recommendation.id); // Wait for recipe information to be fetched
     getRecommendations(recommendation.id);
   });
@@ -172,4 +172,4 @@ async function initializePage() {
 }
 
 // Call the initializePage function when the page loads
-window.addEventListener('load', initializePage);
+window.addEventListener("load", initializePage);
