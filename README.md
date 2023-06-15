@@ -1,7 +1,7 @@
 # NutriWise
 <br />
 <p align="center">
-  <img src="./src/img/bg.jpg" alt="Logo" width="80" height="80">
+  <img src="./src/img/bg.png" alt="Logo" width="200" height="200">
   <h3 align="center">NutriWise</h3>
 </p>
 
