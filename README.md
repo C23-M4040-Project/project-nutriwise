@@ -44,7 +44,7 @@ https://docs.google.com/presentation/d/1y-_G-KKz5d_Do_a0K5KN0BAn7QlBdLyVwFVjdDl4
 
 # Project Resource
 
-Berikut Resources yang dibutuhkan dalam pengembangan Website FoodIntake :
+Berikut Resources yang dibutuhkan dalam pengembangan Website NutriWise :
 <ul>
   <li>Bahasa Pemograman :</li>
     <ul>
