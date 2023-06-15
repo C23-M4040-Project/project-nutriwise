@@ -38,7 +38,7 @@ function getRandomTrivia() {
   triviaContainer.textContent = 'Loading trivia...';
   triviaButton.disabled = true;
 
-  fetch('https://api.spoonacular.com/food/trivia/random?apiKey=49e13950a1f243ceacef5d4042116c27')
+  fetch('https://api.spoonacular.com/food/trivia/random?apiKey=081a0d73ebe44ceb8925d3e0327af237')
     .then((response) => response.json())
     .then((data) => {
       triviaContainer.textContent = data.text;
