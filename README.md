@@ -1,8 +1,8 @@
 # NutriWise
 <br />
 <p align="center">
-  <img src="./src/img/bg.png" alt="Logo" width="80" height="80">
-  <h3 align="center">FoodIntake</h3>
+  <img src="./src/img/bg.jpg" alt="Logo" width="80" height="80">
+  <h3 align="center">NutriWise</h3>
 </p>
 
 ## Authors
