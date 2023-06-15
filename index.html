@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nutriwise Website</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" type="text/css" href="src/css/style.css" />
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- header section start -->
+    <div class="header" id="home" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(src/img/backh.jpg); width: 100%; height: 100vh; background-repeat: no-repeat; background-size: cover">
+      <nav id="navbar">
+        <a href="#" class="logo"><img src="src/img/bg.png" /></a>
+
+        <div class="links" id="nav">
+          <a href="#home">home</a>
+          <a href="#about">about</a>
+          <a href="./src/page/menu.html">menu</a>
+          <a href="./src/page/profil-team.html">team</a>
+        </div>
+
+        <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+        <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+      </nav>
+
+      <div class="content">
+        <h3>Make a Fresh</h3>
+        <h1>Diet Food<br />in a Easy Way</h1>
+        <button class="btn">Explore</button>
+      </div>
+    </div>
+
+    <!-- header section ends -->
+
+    <!-- about section start -->
+    <section class="about" id="about">
+      <h1 class="heading">About <span>US</span></h1>
+      <div class="container">
+        <div class="image"></div>
+        <div class="about-content">
+          <h4>Nutriwise is here to provide a solution.</h4>
+          <h1>
+            to provide complete information <br />
+            about healthy food and how to make it
+          </h1>
+          <p>
+            Nutriwise's role as a provider of diet food articles becomes very important, with the advantages offered by Nutriwise it is hoped that it can help users choose foods that are not only right in terms of what they want but most
+            importantly help users achieve an ideal healthy lifestyle based on educational resources. comprehensive diet or nutrition.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- artikel section start -->
+
+    <section class="article" id="article">
+      <h1 class="heading">Discover <span>Delicious Foods</span></h1>
+      <div class="container">
+        <div class="article-box">
+          <div class="article-img">
+            <img src="src/img/chimicurri.jpg" />
+          </div>
+          <div class="article-content">
+            <h3>A Chimichurri You'll Want to Put on Everything</h3>
+            <p id="chimichurri-para" class="content-paragraph">
+              If you have never made chimichurri sauce, its time. Chimichurri is a vibrant, zingy, uncooked herb and oil sauce originating in Argentina and Uruguay, popular throughout South America. Chimichurri is made with a variety of
+              herbs, garlic and olive oil.
+            </p>
+            <a href="#article" class="toggle-button" onclick="toggleReadMore('chimichurri-para')">Read More</a>
+            <a href="https://carlsbadcravings.com/chimichurri-sauce-recipe/" class="toggle-button" target="_blank">Go to Article</a>
+          </div>
+        </div>
+
+        <div class="article-box">
+          <div class="article-img">
+            <img src="src/img/drink.jpg" />
+          </div>
+          <div class="article-content">
+            <h3>A Refreshing Drink To Welcome You All</h3>
+            <p id="refreshing-drink-para" class="content-paragraph">
+              Spring is a beautiful season that represents rebirth and renewal. It's a time when nature wakes up from its winter slumber and starts to show its vibrant colors. As the days get longer and the temperatures get warmer to drink.
+            </p>
+            <a href="#article" class="toggle-button" onclick="toggleReadMore('refreshing-drink-para')">Read More</a>
+            <a href="https://gretelbelle.com/refreshing-drinks-to-sip-on-this-season/" class="toggle-button" target="_blank">Go to Article</a>
+          </div>
+        </div>
+
+        <div class="article-box" id="article">
+          <div class="article-img">
+            <img src="src/img/potato.jpg" />
+          </div>
+          <div class="article-content">
+            <h3>For a Baked Potato (fluffy every time when using this trick)</h3>
+            <p id="baked-potato-para" class="content-paragraph">
+              Make the Best Baked Potato in the oven with all of my foolproof tips and tricks. It will have perfectly crispy skin with a soft, fluffy interior, every single time. If there was such as thing as potato weather, this would be
+              it.
+            </p>
+            <a href="#article" class="toggle-button" onclick="toggleReadMore('baked-potato-para')">Read More</a>
+            <a href="https://www.sandravalvassori.com/the-best-baked-potato/" class="toggle-button" target="_blank">Go to Article</a>
+          </div>
+        </div>
+        <!-- artikel section end -->
+
+        <!-- trivia section start -->
+        <div class="card-trivia">
+          <h1 class="heading">Foods <span>Trivia</span></h1>
+          <img src="./src/img/trivia.jpg" alt="Trivia Image" />
+          <div class="card-content">
+            <h3 class="card-subheading">Did You Know?</h3>
+            <p class="card-text" id="trivia-text">Loading trivia...</p>
+            <button class="card-button" onclick="getRandomTrivia()" id="trivia-button">Get Random Trivia</button>
+          </div>
+        </div>
+        <!-- trivia section end -->
+
+        <!-- calculator section start -->
+        <section class="calculator" id="calculator">
+          <div class="container">
+            <div class="image"></div>
+
+            <div class="calculator-content">
+              <h1>Count Your Calories !</h1>
+              <p>
+                Counting calories plays a crucial role in maintaining a healthy lifestyle and achieving one's fitness goals. By tracking and understanding our calorie intake, we gain control over our nutrition and weight. It empowers us to
+                make informed choices about the food we consume, promoting mindfulness and preventing overeating. Through calorie counting, we become more aware of portion sizes and ensure we're getting the right balance of nutrients for
+                our bodies. It aids in weight management and helps us achieve a healthy body composition. By embracing the importance of calorie counting, we can establish long-term health benefits and develop a greater understanding of our
+                overall dietary patterns.
+              </p>
+              <button id="calculator-button"><a href="https://gendhismanis.id/kalkulatorkalori.html" target="_blank">Calories Calculator</a></button>
+            </div>
+          </div>
+        </section>
+        <!-- calculator section end -->
+
+        <!-- footer section start -->
+
+        <section class="footer" id="footer">
+          <div class="container">
+            <div class="footer-box">
+              <h3>about us</h3>
+              <p>
+                Nutriwise is here to provide a solution to provide complete information about healthy food and the right diet. By presenting high-quality articles, it can be in the form of a guide to help users choose the right and healthy
+                food.
+              </p>
+              <p>copyright &copy;2023 all rights reserved by | <a href="https://dicoding.co.id/"> Nutriwise </a></p>
+            </div>
+
+            <div class="footer-box">
+              <h3>Our Service</h3>
+              <p><b>Serving highly nutritious food recipes</b></p>
+              <p><b>Serving food that make your body healthier</b></p>
+              <p><b>Serving low calorie food recipes</b></p>
+              <p><b>Nutritional content listed</b></p>
+            </div>
+
+            <div class="footer-box">
+              <h3>Follow Us</h3>
+              <div>
+                <a href="https://www.facebook.com/dicoding/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/dicoding/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/dicoding" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/c/DicodingIndonesia" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- footer section ends -->
+        <script src="src/js/script.js"></script>
+      </div>
+    </section>
+  </body>
+</html>

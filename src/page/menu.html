@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+
+    <title>Nutriwise - Menu</title>
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="header" id="home" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/backh.jpg); background-repeat: no-repeat; background-size: cover; height: 500px">
+      <nav id="navbar">
+        <a href="#" class="logo"><img src="../img/bg.png" /></a>
+
+        <div class="links" id="nav">
+          <a href="../../index.html">home</a>
+          <a href="../../index.html">about</a>
+          <a href="./menu.html">menu</a>
+          <a href="./profil-team.html">team</a>
+        </div>
+
+        <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+        <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+      </nav>
+
+      <div class="content">
+        <h3>Make a Fresh</h3>
+        <h1>Diet Food<br />in a Easy Way</h1>
+        <!-- <button class="btn">Explore</button> -->
+      </div>
+    </div>
+
+    <div class="search-container">
+      <h1>Menus Page</h1>
+      <p>Find the best recipe for ur favorite food</p>
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search recipes..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <section id="recipe-results">
+      <h2>Special Recipe For You</h2>
+      <div id="recipe-list"></div>
+    </section>
+
+    <section id="recommendations">
+      <h2>Other Food (Can be Non-diet Food)</h2>
+      <div id="recommendation-list"></div>
+    </section>
+
+    <section class="footer" id="footer">
+      <div class="container">
+        <div class="footer-box">
+          <h3>about us</h3>
+          <p>
+            Nutriwise is here to provide a solution to provide complete information about healthy food and the right diet. By presenting high-quality articles, it can be in the form of a guide to help users choose the right and healthy
+            food.
+          </p>
+          <p>copyright &copy;2023 all rights reserved by | <a href="https://dicoding.co.id/"> Nutriwise </a></p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Our Service</h3>
+          <p><b>Serving highly nutritious food recipes</b></p>
+          <p><b>Serving food that make your body healthier</b></p>
+          <p><b>Serving low calorie food recipes</b></p>
+          <p><b>Nutritional content listed</b></p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Follow Us</h3>
+          <div>
+            <a href="https://www.facebook.com/dicoding/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/dicoding/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/dicoding" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/c/DicodingIndonesia" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>
